@@ -7,10 +7,18 @@ export default class Nav extends React.Component {
 		super(props)
 
 		this.state = {
-			toggle : 'closed'
+			toggle : 'closed',
+			navVisible: false
 		}
 
+		this.toggleNav = this.toggleNav.bind(this)
 		this.changeSandwich = this.changeSandwich.bind(this)
+	}
+
+	toggleNav(){
+		console.log('togglingNav')
+		this.changeSandwich()
+		this.setState({navVisible: (this.state.navVisible == true) ? false : true})
 	}
 
 	//Help update this specific navLink text to change when signed-in-or-not :) 
@@ -34,23 +42,28 @@ export default class Nav extends React.Component {
 			},
 		];
 
-		let toggleClass = (this.state.toggle == 'open') ? 'is-active' : '';
+		let toggleClass = (this.state.navVisible == true) ? 'is-active' : '';
 		let sandClass = `hamburger hb-simple ${toggleClass}`
 
-		let sandwichIcon = <button className={sandClass} type="button" onClick={this.changeSandwich}>
+		let sandwichIcon = <button className={sandClass} type="button" onClick={this.toggleNav}>
 			  <span className="hamburger-box">
 			    <span className="hamburger-inner"></span>
 			  </span>
-			</button> 
+			</button>;
+		const navStyle = {
+			width: (this.state.navVisible == true) ? '200px' : '0px',
 
+		}
+
+		let sideNav = <nav id="mySidenav" className="sidenav" style={navStyle}>
+			<p>NavMicCheck</p>
+		</nav>;
 
 		return (
-			<nav>
-				{sandwichIcon}
-				<ul className='navUL'>
-					<li className='navLI'>Test Li</li>
-				</ul>
-			</nav> 
+			<React.Fragment>
+			{sideNav}
+			{sandwichIcon}
+			</React.Fragment>
 	    );
 	}
 }

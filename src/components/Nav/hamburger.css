@@ -18,6 +18,8 @@
   border: 0;
   margin: 0;
   overflow: visible; 
+  bottom: 0;
+  position: absolute; 
 }
 .hamburger:hover {
   opacity: 0.7; 
