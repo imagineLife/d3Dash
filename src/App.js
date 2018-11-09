@@ -23,14 +23,21 @@ class App extends React.Component{
 					txt: 'test4',
 					url: 'url4'
 				}
-			]
+			],
+			navOpen: false
 		}
+
+		this.closeNavIfOpen = this.closeNavIfOpen.bind(this)
+	}
+
+	closeNavIfOpen(){
+		console.log('micCheck')
 	}
 
 	render(){
 		return (
-			<main>
-				<Nav navLinks={this.state.links}/>
+			<main onClick={this.closeNavIfOpen}>
+				<Nav navLinks={this.state.links} openState={this.state.navOpen}/>
 			</main>
 		);
 	}
