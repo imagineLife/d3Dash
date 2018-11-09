@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Nav from './components/Nav'
+import './resetNormalize.css'
+import './main.css'
 class App extends React.Component{
 	constructor(props){
 		super(props)
@@ -31,13 +33,20 @@ class App extends React.Component{
 	}
 
 	closeNavIfOpen(){
-		console.log('micCheck')
+		console.log('navOpen?!')
+		console.log(this.state.navOpen)
+		if(this.state.navOpen == true){
+			this.setState({navOpen: false})
+		}
 	}
 
 	render(){
 		return (
 			<main onClick={this.closeNavIfOpen}>
-				<Nav navLinks={this.state.links} openState={this.state.navOpen}/>
+				<Nav 
+					navLinks={this.state.links} 
+					openState={this.state.navOpen}
+				/>
 			</main>
 		);
 	}
