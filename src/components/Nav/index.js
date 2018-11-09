@@ -3,7 +3,6 @@ import './index.css';
 import './hamburger.css';
 
 export default function Nav(props){
-
 	let newToggle = (props.openState == true) ? 'open' : 'closed'
 
 	//array of Objects,
@@ -29,7 +28,11 @@ export default function Nav(props){
 
 	}
 
-	let sideNav = <nav id="mySidenav" className="sidenav" style={navStyle}>
+	let sideNav = <nav 
+		id="mySidenav" 
+		className="sidenav" 
+		style={navStyle}
+		onClick={props.changeNavState}>
 		<p>NavMicCheck</p>
 	</nav>;
 
