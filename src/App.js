@@ -33,11 +33,7 @@ class App extends React.Component{
 	}
 
 	closeNavIfOpen(){
-		console.log('navOpen?!')
-		console.log(this.state.navOpen)
-		if(this.state.navOpen == true){
-			this.setState({navOpen: false})
-		}
+		this.setState({navOpen: !this.state.navOpen})
 	}
 
 	render(){
@@ -46,6 +42,7 @@ class App extends React.Component{
 				<Nav 
 					navLinks={this.state.links} 
 					openState={this.state.navOpen}
+					changeNavState={this.closeNavIfOpen}
 				/>
 			</main>
 		);
