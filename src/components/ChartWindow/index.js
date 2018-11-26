@@ -6,7 +6,7 @@ export default function ChartWindow(props){
 	return (
 		<iframe 
 			className='myFrame'
-			src='../../pages/bar'
+			src='./src/pages/bar/index.html'
 		/>
     );
 }
