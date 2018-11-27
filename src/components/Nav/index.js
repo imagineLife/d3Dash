@@ -25,7 +25,7 @@ export default function Nav(props){
 		  </span>
 		</button>;
 	const navStyle = {
-		width: (props.openState == true) ? '200px' : '0px',
+		width: (props.openState == true) ? '125px' : '0px',
 
 	}
 
