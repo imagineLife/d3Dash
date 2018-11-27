@@ -29,7 +29,7 @@ ul li.liWithIcon{
   line-height: 45px;
 }
 
-nav ul li{
+nav ul li, nav ul li ul li{
   color: white;
   cursor: pointer;
   text-align: center;
@@ -37,6 +37,10 @@ nav ul li{
 
 nav ul li:hover{
   text-decoration: underline;
+}
+
+.linkChild{
+  font-size: .7em;
 }
 
 .liWithIcon a {

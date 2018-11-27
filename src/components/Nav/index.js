@@ -7,10 +7,24 @@ export default function Nav(props){
 	console.log(props.navLinks)
 	let newToggle = (props.openState == true) ? 'open' : 'closed'
 
+	// 	working on sidebar section children
+	//	{l.children.length > 0 && childrenUL}
 	//array of Objects,
 	//these are properties of each NavLink below	
 	const navLinks = props.navLinks.map(l => {
-		return <li key={l.parent} value={l.parent}>{l.parent}</li>
+
+		let linkChildren = l.children.map(ch => {
+			return <li key={ch} className="linkChild">{ch}</li>
+		})
+
+		let childrenUL = <ul>{linkChildren}</ul>
+
+		return <li 
+			key={l.parent} 
+			value={l.parent}
+			onClick={props.changeNavState}>
+				{l.parent}
+			</li>
 	});
 
 	let toggleClass = (props.openState == true) ? 'is-active' : '';
@@ -32,8 +46,7 @@ export default function Nav(props){
 	let sideNav = <nav 
 		id="mySidenav" 
 		className="sidenav" 
-		style={navStyle}
-		onClick={props.changeNavState}>
+		style={navStyle}>
 			<ul>
 				{navLinks}
 			</ul>
