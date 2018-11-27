@@ -34,11 +34,10 @@ export default function Nav(props){
 		className="sidenav" 
 		style={navStyle}
 		onClick={props.changeNavState}>
-		>
-		<ul>
-			{navLinks}
-		</ul>
-	</nav>;
+			<ul>
+				{navLinks}
+			</ul>
+		</nav>;
 
 	return (
 		<React.Fragment>
