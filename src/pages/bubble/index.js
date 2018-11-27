@@ -28,6 +28,7 @@ function setSVGDims(obj, w, h){
   });
 }
 
+console.log('here?!')
 let thisDataObj = [
    {
    "id": "SteelyDan",
@@ -93,7 +94,9 @@ let simulation = d3.forceSimulation()
   .force("yforce", d3.forceY().strength(.03))
   .force("xforce", d3.forceX().strength(.03));
 
-const {chartDiv, svgObj, gWrapper} = makeD3ElementsFromParentDiv('chart');
+const {chartDiv, svgObj, gWrapper} = makeD3ElementsFromParentDiv('chartDiv');
+console.log('chartDiv')
+console.log(chartDiv)
 
 function buildChart(dataObj){
 
