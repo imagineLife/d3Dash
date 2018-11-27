@@ -10,7 +10,7 @@ const colorLabel = 'Total Days';
 
 const margin = { 
 	left: 140, 
-	right: 200,
+	right: 25,
 	top: 20,
 	bottom: 120
 };
@@ -41,8 +41,8 @@ gObj.attr('transform', `translate(${margin.left},${margin.top})`);
 const xAxisG = lib.makeAxisG(gObj, `translate(0, ${divHeightLessMargins})`, 'axis x');
 const yAxisG = lib.makeAxisG(gObj, ``, 'axis y');
 
-const colorLegendG = gObj.append('g')
-  .attr('transform', `translate(${divWidthLessMargins + 60}, 150)`);
+// const colorLegendG = gObj.append('g')
+//   .attr('transform', `translate(${divWidthLessMargins + 60}, 150)`);
 
 
 //set placeholder for axis labels      
@@ -53,13 +53,13 @@ let yAxisLabel = yAxisG.append('text');
 xAxisLabel = lib.makeAxisLabel(xAxisG, 'axis-label', (divWidthLessMargins / 2), 100, '', '', xLabel);
 yAxisLabel = lib.makeAxisLabel(yAxisG, 'axis-label', (-divHeightLessMargins / 2), (-margin.left / 1.5), `rotate(-90)`, 'middle', yLabel);
 
-colorLegendG.append('text')
-  .attrs({
-  	'class': 'legend-label',
-  	'x': -3,
-  	'y': -40
-  })
-  .text(colorLabel);
+// colorLegendG.append('text')
+//   .attrs({
+//   	'class': 'legend-label',
+//   	'x': -3,
+//   	'y': -40
+//   })
+//   .text(colorLabel);
 
 //Build Axis elements
 const xAxis = d3.axisBottom()
