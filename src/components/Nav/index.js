@@ -3,17 +3,15 @@ import './index.css';
 import './hamburger.css';
 
 export default function Nav(props){
+	console.log('nav props.navLinks')
+	console.log(props.navLinks)
 	let newToggle = (props.openState == true) ? 'open' : 'closed'
 
 	//array of Objects,
 	//these are properties of each NavLink below	
-	const navLinkArray = [
-		{
-			linkTo : "/about",
-			imgSrc : "/imgs/info.ico",
-			alt : "About"
-		},
-	];
+	const navLinks = props.navLinks.map(l => {
+		return <li key={l.parent}>{l.parent}</li>
+	});
 
 	let toggleClass = (props.openState == true) ? 'is-active' : '';
 	let sandClass = `hamburger hb-simple ${toggleClass}`
@@ -33,7 +31,10 @@ export default function Nav(props){
 		className="sidenav" 
 		style={navStyle}
 		onClick={props.changeNavState}>
-		<p>NavMicCheck</p>
+		>
+		<ul>
+			{navLinks}
+		</ul>
 	</nav>;
 
 	return (
