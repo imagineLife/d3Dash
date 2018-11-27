@@ -51,10 +51,10 @@ class App extends React.Component{
 				        'updating'
 				    ] 
 				},
-				{
-					parent: 'radar',
-					children: [ 'functional' ]
-				},
+				// {
+				// 	parent: 'radar',
+				// 	children: [ 'functional' ]
+				// },
 				{
 					parent: 'scatter',
 					children: [ 'cow', 'music', 'radial' ]
