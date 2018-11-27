@@ -73,7 +73,7 @@ let parsedData;
 
 function buildChart(obj){
 
- let parsedData = d3.csv(obj.dataFile, parseData, data => {
+ d3.csv(obj.dataFile, parseData, data => {
    parsedData = data;
 
    xScale
