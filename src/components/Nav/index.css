@@ -29,6 +29,10 @@ ul li.liWithIcon{
   line-height: 45px;
 }
 
+nav ul li{
+  color: white;
+}
+
 .liWithIcon a {
   height:55px; 
 }
@@ -53,7 +57,6 @@ a{
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
 }
 
 .sidenav a {
