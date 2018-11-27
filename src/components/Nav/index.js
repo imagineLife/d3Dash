@@ -10,13 +10,16 @@ export default function Nav(props){
 	//array of Objects,
 	//these are properties of each NavLink below	
 	const navLinks = props.navLinks.map(l => {
-		return <li key={l.parent}>{l.parent}</li>
+		return <li key={l.parent} value={l.parent}>{l.parent}</li>
 	});
 
 	let toggleClass = (props.openState == true) ? 'is-active' : '';
 	let sandClass = `hamburger hb-simple ${toggleClass}`
 
-	let sandwichIcon = <button className={sandClass} type="button" onClick={props.changeNavState}>
+	let sandwichIcon = <button 
+		className={sandClass} 
+		type="button" 
+		onClick={props.toggleNavBar}>
 		  <span className="hamburger-box">
 		    <span className="hamburger-inner"></span>
 		  </span>
