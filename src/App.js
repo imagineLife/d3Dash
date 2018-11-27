@@ -9,24 +9,83 @@ class App extends React.Component{
 		super(props)
 
 		this.state = {
-			links : [
-				{
-					txt: 'test1',
-					url: 'url1'
+			links : [ 
+				{ 
+					parent: 'area',
+					children: [ 'clipPath', 'singleStacked', 'stacked' ] 
 				},
 				{
-					txt: 'test2',
-					url: 'url2'
+					parent: 'bar',
+					children: [ 'eue', 'horizontal', 'musicNotes', 'scrolling', 'stacked' ] 
 				},
 				{
-					txt: 'test3',
-					url: 'url3'
+					parent: 'bubble',
+					children: [ 'packed' ] },
+				{
+					parent: 'colorScaleRect',
+					children: [] },
+				{
+					parent: 'donut',
+					children: [] },
+				{
+					parent: 'iFrame',
+					children: [ 'double', 'quad', 'withChart' ] 
 				},
 				{
-					txt: 'test4',
-					url: 'url4'
-				}
-			],
+					parent: 'line',
+					children: [ 'multi' ] 
+				},
+				{
+		    		parent: 'lineArrows',
+		    		children: [] 
+		    	},
+	    		{
+		    		parent: 'lineSVG',
+		    		children: [] 
+		    	},
+	    		{
+		    		parent: 'pie',
+		    		children: [
+		    			'noLegend',
+				        'noLegendjson',
+				        'oneSlice',
+				        'polarArea',
+				        'polarAreaJSON',
+				        'polarAreaWithLegend',
+				        'updateClone',
+				        'updating'
+				    ] 
+				},
+				{
+					parent: 'radar',
+					children: [ 'functional' ]
+				},
+				{
+					parent: 'scatter',
+					children: [ 'cow', 'music', 'radial' ]
+				},
+				{
+					parent: 'state',
+					children: [ 
+						'RIPoverty',
+	       				'RIincome',
+	       				'housingPermits',
+	       				'income',
+	       				'incomeWithLegend',
+	       				'poverty',
+	       				'webClone',
+	       				'webToCT' 
+	       			]
+	       		},
+	       		{
+	       			parent: 'text',
+	       			children: [ 'dataBased', 'manySVGs' ] 
+	       		},
+	       		{
+	       			parent: 'textPath',
+	       			children: [ 'cubicBezierCurve', 'twoCubicBezierCurves' ]
+	       		}
+	       	],
 			navOpen: false
 		}
 
@@ -34,6 +93,7 @@ class App extends React.Component{
 	}
 
 	closeNavIfOpen(e){
+		console.log('closeNavIfOpen')
 		console.log('e')
 		console.log(e.target)
 		// if(this.state.navOpen == true){
