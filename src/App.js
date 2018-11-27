@@ -102,6 +102,8 @@ class App extends React.Component{
 	}
 
 	render(){
+		let selectedSrc = (this.state.selectedSrc) ? this.state.selectedSrc : 'bar';
+
 		return (
 			<main onClick={e => this.closeNavIfOpen}>
 				<Nav 
@@ -109,7 +111,7 @@ class App extends React.Component{
 					openState={this.state.navOpen}
 					changeNavState={this.closeNavIfOpen}
 				/>
-				<ChartWindow changeNavState={this.closeNavIfOpen}/>
+				<ChartWindow changeNavState={this.closeNavIfOpen} iSrc={selectedSrc}/>
 			</main>
 		);
 	}
