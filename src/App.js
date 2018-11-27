@@ -20,16 +20,11 @@ class App extends React.Component{
 				},
 				{
 					parent: 'bubble',
-					children: [ 'packed' ] },
-				{
-					parent: 'colorScaleRect',
-					children: [] },
+					children: [ 'packed' ] 
+				},
 				{
 					parent: 'donut',
-					children: [] },
-				{
-					parent: 'iFrame',
-					children: [ 'double', 'quad', 'withChart' ] 
+					children: [] 
 				},
 				{
 					parent: 'line',
@@ -90,15 +85,18 @@ class App extends React.Component{
 		}
 
 		this.closeNavIfOpen = this.closeNavIfOpen.bind(this)
+		this.setSrcAndCloseNav = this.setSrcAndCloseNav.bind(this)
 	}
 
 	closeNavIfOpen(e){
-		console.log('closeNavIfOpen')
-		console.log('e')
-		console.log(e.target)
-		// if(this.state.navOpen == true){
-			this.setState({navOpen: !this.state.navOpen})
-		// }
+		this.setState({navOpen: !this.state.navOpen})
+	}
+
+	setSrcAndCloseNav(e){
+		this.setState({
+			navOpen: !this.state.navOpen,
+			selectedSrc: e.target.innerHTML
+		})
 	}
 
 	render(){
@@ -109,7 +107,8 @@ class App extends React.Component{
 				<Nav 
 					navLinks={this.state.links} 
 					openState={this.state.navOpen}
-					changeNavState={this.closeNavIfOpen}
+					changeNavState={this.setSrcAndCloseNav}
+					toggleNavBar={this.closeNavIfOpen}
 				/>
 				<ChartWindow changeNavState={this.closeNavIfOpen} iSrc={selectedSrc}/>
 			</main>
