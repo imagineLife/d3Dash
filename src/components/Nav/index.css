@@ -31,6 +31,11 @@ ul li.liWithIcon{
 
 nav ul li{
   color: white;
+  cursor: pointer;
+}
+
+nav ul li:hover{
+  text-decoration: underline;
 }
 
 .liWithIcon a {
