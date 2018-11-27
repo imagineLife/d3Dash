@@ -1,6 +1,6 @@
 const fs = require('fs');
 const dir = '../dataVisPractice/responsive';
-const forgetFiles = ['.DS_Store','.gitignore','normalizeReset.css','dark.css','colorSCaleRect','colorScaleCanvas','colorLegend','colorLegendHz']
+const forgetFiles = ['.DS_Store','.gitignore','normalizeReset.css','dark.css','colorSCaleRect','colorScaleCanvas','colorLegend','colorLegendHz', 'lib.js']
 const docFiles = fs.readdirSync(dir);
 const filterdDocs = docFiles.filter(file => !forgetFiles.includes(file))
 
