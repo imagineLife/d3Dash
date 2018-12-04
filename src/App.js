@@ -79,7 +79,11 @@ class App extends React.Component{
 	       		{
 	       			parent: 'textPath',
 	       			children: [ 'cubicBezierCurve', 'twoCubicBezierCurves' ]
-	       		}
+	       		},
+				{
+					parent: 'treeLayout',
+					children: [] 
+				}
 	       	],
 			navOpen: false
 		}
