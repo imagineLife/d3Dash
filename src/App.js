@@ -11,6 +11,10 @@ class App extends React.Component{
 		this.state = {
 			links : [ 
 				{ 
+					parent: 'about',
+					children: [] 
+				},
+				{ 
 					parent: 'area',
 					children: [ 'clipPath', 'singleStacked', 'stacked' ] 
 				},
