@@ -50,7 +50,6 @@ lib.makeAxisLabel = (parent, className, xPos, yPos, transformation, anch, textVa
 }
 
 lib.setAxisLabelAttrs = (parent, cl, xVal, yVal, trans, txtAnc, txt) => {
-	console.log('here')
 	return parent
 	 .attrs({
 	   'class': cl,

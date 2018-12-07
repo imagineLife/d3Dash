@@ -87,6 +87,10 @@ class App extends React.Component{
 				{
 					parent: 'treeLayout',
 					children: [] 
+				},
+				{
+					parent: 'treemap',
+					children: [] 
 				}
 	       	],
 			navOpen: false
@@ -97,6 +101,7 @@ class App extends React.Component{
 	}
 
 	closeNavIfOpen(e){
+		console.log('closeNavIfOpen');
 		this.setState({navOpen: !this.state.navOpen})
 	}
 

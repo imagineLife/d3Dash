@@ -7,7 +7,7 @@ export default function ChartWindow(props){
 	console.log(props)
 	return (
 		<iframe 
-			onClick={() => props.changeNavState}
+			onClick={props.changeNavState}
 			className='myFrame'
 			src={`./src/pages/${props.iSrc}/index.html`}
 		/>
