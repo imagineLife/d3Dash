@@ -42,6 +42,10 @@ class App extends React.Component{
 		    		parent: 'lineSVG',
 		    		children: [] 
 		    	},
+		    	{
+		    		parent: 'packedCircles',
+		    		children: [] 
+		    	},
 	    		{
 		    		parent: 'pie',
 		    		children: [
