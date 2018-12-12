@@ -49,8 +49,8 @@ export default function Nav(props){
 		style={navStyle}>
 			<ul>
 				{navLinks}
-				<li onClick={props.toggleNavBar}>CLOSE</li>
 			</ul>
+			<li className="closeLink" onClick={props.toggleNavBar}>CLOSE</li>
 		</nav>;
 
 	return (
