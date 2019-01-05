@@ -31,13 +31,6 @@ body {
     padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
 /* Add a card effect for articles */
 .card {
      background-color: white;
@@ -74,6 +67,42 @@ body {
 .worldmap{
   background: url('../../imgs/worldmap.jpg');
   background-size: cover; 
+}
+
+.otherWorksImg{
+  min-height: 60px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.5);
+}
+
+.otherWorksImg:hover .overlay {
+  opacity: 1;
+}
+
+.overlayText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
