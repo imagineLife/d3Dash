@@ -13,11 +13,11 @@ nav {
   z-index: 10;
 }
 
-nav ul{
+nav ul, nav li{
 	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display:block;
+  margin: 0;
+  padding: 0;
+  display:block;
 }
 
 ul li.liWithIcon{
@@ -29,13 +29,15 @@ ul li.liWithIcon{
   line-height: 45px;
 }
 
-nav ul li, nav ul li ul li{
+nav ul li, nav ul li ul li, nav li{
   color: white;
   cursor: pointer;
   text-align: center;
+  font-family: sans-serif;
 }
 
-nav ul li:hover{
+nav ul li:hover,
+nav li:hover{
   text-decoration: underline;
 }
 
@@ -90,6 +92,6 @@ a{
   margin-left: 50px;
 }
 
-.closeLink{
-  
-}
+/*.closeLink{
+  color: white;
+}*/

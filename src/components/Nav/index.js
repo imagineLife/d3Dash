@@ -3,14 +3,10 @@ import './index.css';
 import './hamburger.css';
 
 export default function Nav(props){
-	console.log('nav props.navLinks')
-	console.log(props.navLinks)
+	// console.log('nav props.navLinks')
+	// console.log(props.navLinks)
 	let newToggle = (props.openState == true) ? 'open' : 'closed'
 
-	// 	working on sidebar section children
-	//	{l.children.length > 0 && childrenUL}
-	//array of Objects,
-	//these are properties of each NavLink below	
 	const navLinks = props.navLinks.map(l => {
 
 		let linkChildren = l.children.map(ch => {
@@ -50,7 +46,7 @@ export default function Nav(props){
 			<ul>
 				{navLinks}
 			</ul>
-			<li className="closeLink" onClick={props.toggleNavBar}>CLOSE</li>
+			<li className="closeLink linkChild" onClick={props.toggleNavBar}>CLOSE</li>
 		</nav>;
 
 	return (
